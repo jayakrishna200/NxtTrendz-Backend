@@ -1,0 +1,49 @@
+###
+GET http://localhost:3000/users/
+
+###
+DELETE http://localhost:3000/users/delete
+
+###
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+    "username":"jaya1",
+    "password":"jaya@2023"
+}
+
+###
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username":"jaya1",
+    "password":"jaya@2023"
+}
+
+###
+GET http://localhost:3000/products/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpheWExIiwiaWF0IjoxNzM0MTA3NzE0fQ.eduVUQgqMerxw5rhoWxQBMi374YSOLI5Tz78BpQNGfg
+
+###
+GET http://localhost:3000/products/?sort_by=PRICE_HIGH&category=ELECTRONICS&title_search=M&rating=4.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpheWExIiwiaWF0IjoxNzM0MTA3NzE0fQ.eduVUQgqMerxw5rhoWxQBMi374YSOLI5Tz78BpQNGfg
+
+###
+GET http://localhost:3000/products/7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpheWExIiwiaWF0IjoxNzM0MTA3NzE0fQ.eduVUQgqMerxw5rhoWxQBMi374YSOLI5Tz78BpQNGfg
+
+###
+PUT http://localhost:3000/products/39
+ Content-Type: application/json
+
+{
+    "availability":"In Stock",
+    "description":"A spice without which Indian cuisine would be incomplete, the most common variety of chilli used apart from red is the green. These are used with or without the stalks, whole or chopped, with seeds or deseeded. They are used fresh, dried, powdered, pickled or in sauces.",
+    "style":"Fresh Produce Green Chilli",
+    "total_reviews":789
+}
+
+###
+GET http://localhost:3000/similar-products/?category=CLOTHING
